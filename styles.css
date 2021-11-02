@@ -31,3 +31,7 @@ body {
 .divsGrid {
     border: 1px black solid;
 }
+
+.color {
+    background-color: blueviolet;
+}

@@ -10,11 +10,9 @@ while (i <= 256) {
     i++
 }
 
-function paint() {
-    // paint when mouse is over the elements
-    console.log('hey')
-}
 
 allDivs.forEach(div => {
-    div.addEventListener('mouseover', paint)
+    div.addEventListener('mouseover', (div) => {
+        console.log(div)
+    })
 });
