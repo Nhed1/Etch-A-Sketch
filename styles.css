@@ -21,8 +21,6 @@ body {
     display: grid;
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(16,1fr);
-
-
     height: 60%;
     width: 70%;
     background-color: lightskyblue;
@@ -30,8 +28,4 @@ body {
 
 .divsGrid {
     border: 1px black solid;
-}
-
-.color {
-    background-color: blueviolet;
 }

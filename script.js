@@ -10,9 +10,13 @@ while (i <= 256) {
     i++
 }
 
+function getElement() {
+    let attribute = this
+    attribute.style.backgroundColor = 'blue'
+    // console.log(attribute)
+}
 
 allDivs.forEach(div => {
-    div.addEventListener('mouseover', (div) => {
-        console.log(div)
-    })
+    div.addEventListener('mouseover', getElement)
+
 });
