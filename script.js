@@ -6,7 +6,10 @@ let sizeRange = document.querySelector('.size')
 
 function createGrid(value) {
     let gridSize = value ** 2
-    while (i <= gridSize) {
+    console.log(gridSize)
+    console.log(value)
+    while (i < gridSize) {
+
         let div = document.createElement('div')
         div.classList.add('divsGrid')
         container.appendChild(div)
@@ -18,7 +21,7 @@ function createGrid(value) {
 
 sizeRange.addEventListener('click', function () {
     let valueRange = this.value
-    console.log(valueRange)
+    // console.log(valueRange)
     createGrid(valueRange)
 })
 
