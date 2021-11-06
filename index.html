@@ -12,10 +12,10 @@
 <body>
     <div id="options">
         <div class="sizeCanvas">
-            <label for="">Canvas Size (between 1 to 100)</label>
-            <input class="size" value="1" type="range" max="100" min="1">
+            <label for="">Canvas Size (between 1x1 to 64x64)</label>
+            <input class="size" value="1" type="range" max="64" min="1">
         </div>
-        <button class="clear">Clear</button>
+        <button class="clear" onclick="clearGrid(container)">Clear</button>
     </div>
 
     <div class="container grid">
