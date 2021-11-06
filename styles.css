@@ -23,12 +23,11 @@ body {
     border: 2px solid black;
     margin-top: 20px;
     display: grid;
-    /* grid-template-columns: repeat(16,1fr);
-    grid-template-rows: repeat(16,1fr); */
-    height: 60%;
-    width: 70%;
+    height: 500px;
+    width: 500px;
     background-color: white;
 }
+
 
 .divsGrid {
     border: 1px black solid;

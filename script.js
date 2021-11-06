@@ -3,17 +3,25 @@ let i = 0
 const allDivs = []
 
 let sizeRange = document.querySelector('.size')
-// console.log(sizeRange)
-sizeRange.addEventListener('input', (e) => {
-    console.log(e)
-})
-while (i <= 256) {
-    let div = document.createElement('div')
-    div.classList.add('divsGrid')
-    container.appendChild(div)
-    allDivs.push(div)
-    i++
+
+function createGrid(value) {
+    let gridSize = value ** 2
+    while (i <= gridSize) {
+        let div = document.createElement('div')
+        div.classList.add('divsGrid')
+        container.appendChild(div)
+        container.setAttribute('style', `grid-template-columns: repeat(${value},1fr); grid-template-rows: repeat(${value},1fr);`)
+        allDivs.push(div)
+        i++
+    }
 }
+
+sizeRange.addEventListener('click', function () {
+    let valueRange = this.value
+    console.log(valueRange)
+    createGrid(valueRange)
+})
+
 
 function getElement() {
     let attribute = this
