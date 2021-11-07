@@ -28,6 +28,8 @@ function createGrid(value) {
     }
 }
 
+// clear the div
+clear.addEventListener('click', clearGrid)
 
 // change color of the divs ---------
 function getTheDiv(div) {
