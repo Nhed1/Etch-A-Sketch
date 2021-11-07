@@ -1,7 +1,6 @@
 let container = document.querySelector('.container');
 let clear = document.querySelector('.clear')
 let sizeRange = document.querySelector('.size')
-let i = 0
 
 sizeRange.addEventListener('click', function () {
     let valueRange = this.value
@@ -10,6 +9,8 @@ sizeRange.addEventListener('click', function () {
 })
 
 function createGrid(value) {
+    let i = 0
+    clearGrid(container)
     let gridSize = value ** 2
     // clearGrid(container)
     let style = 'style',
@@ -39,13 +40,13 @@ function changeColor() {
 }
 // ----------------------------------------
 
-
-// function clearGrid(container) {
-//     while (container.firstChild) {
-//         container.removeChild(container.firstChild) // remove all childs
-//     }
-// }
-
+// remove all divs from container
+function clearGrid(container) {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild) // remove all childs
+    }
+}
+// ----------------------------------------
 
 
 
