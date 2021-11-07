@@ -1,8 +1,13 @@
 let container = document.querySelector('.container');
-let i = 0
-const allDivs = []
 let clear = document.querySelector('.clear')
 let sizeRange = document.querySelector('.size')
+let i = 0
+
+sizeRange.addEventListener('click', function () {
+    let valueRange = this.value
+    // console.log(valueRange)
+    createGrid(valueRange)
+})
 
 function createGrid(value) {
     let gridSize = value ** 2
@@ -13,34 +18,34 @@ function createGrid(value) {
     console.log(value)
     while (i < gridSize) {
         let div = document.createElement('div')
+        getTheDiv(div)
+
         div.classList.add('divsGrid')
         container.appendChild(div)
         container.setAttribute(style, gridStyle)
-        allDivs.push(div)
         i++
     }
 }
 
-function clearGrid(container) {
-    while (container.firstChild) {
-        container.removeChild(container.firstChild) // remove all childs
-    }
+
+// change color of the divs ---------
+function getTheDiv(div) {
+    div.addEventListener('mouseover', changeColor)
 }
 
-sizeRange.addEventListener('click', function () {
-    let valueRange = this.value
-    // console.log(valueRange)
-    createGrid(valueRange)
-})
-
-
-function getElement() {
+function changeColor() {
     let attribute = this
     attribute.style.backgroundColor = 'blue'
-    // console.log(attribute)
 }
+// ----------------------------------------
 
-allDivs.forEach(div => {
-    div.addEventListener('mouseover', getElement)
 
-});
+// function clearGrid(container) {
+//     while (container.firstChild) {
+//         container.removeChild(container.firstChild) // remove all childs
+//     }
+// }
+
+
+
+
